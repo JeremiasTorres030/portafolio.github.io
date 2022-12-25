@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Trajan Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Regular'), url('TrajanPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Trajan Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Bold'), url('TrajanPro-Bold.woff') format('woff');
+}
+
+body {
+  font-family: 'Trajan Pro Regular';
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 900px;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: rgb(33, 68, 101);
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  margin: 10px;
+}
+
+#Proyectos .listaProyectos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Proyectos .listaProyectos .cartaDeProyecto {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#Proyectos .listaProyectos .cartaDeProyecto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+}
+
+#Proyectos .listaProyectos .cartaDeProyecto .opcionesDeProyecto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+#Proyectos .listaProyectos .cartaDeProyecto .opcionesDeProyecto .liveCode,
+.sourceCode {
+  margin: 5px 20px;
+}
+
+#Proyectos .listaProyectos .cartaDeProyecto .opcionesDeProyecto img {
+  width: 20px;
+  height: 20px;
+}
