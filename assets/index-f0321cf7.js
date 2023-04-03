@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))o(c);new MutationObserver(c=>{for(const i of c)if(i.type==="childList")for(const n of i.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&o(n)}).observe(document,{childList:!0,subtree:!0});function e(c){const i={};return c.integrity&&(i.integrity=c.integrity),c.referrerPolicy&&(i.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?i.credentials="include":c.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function o(c){if(c.ep)return;c.ep=!0;const i=e(c);fetch(c.href,i)}})();document.querySelector("#app").innerHTML=`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))o(i);new MutationObserver(i=>{for(const c of i)if(c.type==="childList")for(const n of c.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&o(n)}).observe(document,{childList:!0,subtree:!0});function s(i){const c={};return i.integrity&&(c.integrity=i.integrity),i.referrerPolicy&&(c.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?c.credentials="include":i.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function o(i){if(i.ep)return;i.ep=!0;const c=s(i);fetch(i.href,c)}})();document.querySelector("#app").innerHTML=`
     <div class="particulas">
       <div id="particles-js"></div>
       <header>
@@ -48,7 +48,7 @@
               <img
                 src="/assets/icons/linkedin-1-svgrepo-com.svg"
                 alt="icono de linkedin"
-              />Linkedin</a
+              /><p>Linkedin</p></a
             >
             <a
               href="https://github.com/JeremiasTorres030"
@@ -59,7 +59,7 @@
                 src="/assets/icons/github-svgrepo-com.svg"
                 alt="Icono de GitHub"
               />
-              GitHub</a
+              <p>GitHub</p></a
             >
             <a
               href="/assets/Currículum Jeremias Torres.pdf"
@@ -70,7 +70,7 @@
                 src="/assets/icons/curriculum-vitae-resume-svgrepo-com.svg"
                 alt="icono Curriculum"
               />
-              Curriculum</a
+              <p>Curriculum</p></a
             >
           </div>
         </section>
@@ -665,7 +665,7 @@
           <img
             src="/assets/icons/linkedin-1-svgrepo-com copy.svg"
             alt="icono de linkedin"
-          />Linkedin</a
+          /><p>Linkedin</p></a
         >
         <a
           href="https://github.com/JeremiasTorres030"
@@ -676,7 +676,7 @@
             src="/assets/icons/github-svgrepo-com copy.svg"
             alt="Icono de GitHub"
           />
-          GitHub</a
+          <p>GitHub</p></a
         >
         <a
           href="/assets/Currículum Jeremias Torres.pdf"
@@ -687,8 +687,8 @@
             src="/assets/icons/curriculum-vitae-resume-svgrepo-com.svg"
             alt="icono Curriculum"
           />
-          Curriculum</a
+          <p>Curriculum</p></a
         >
       </div>
     </footer>
-`;particlesJS.load("particles-js","/assets/particles.json");const l=s=>document.getElementById(s),u=document.querySelectorAll("#flechaIzquierda"),I=document.querySelectorAll("#flechaDerecha"),p=document.querySelectorAll("button.botonInfoIzq"),q=document.querySelectorAll("button.botonInfoDere"),S=document.querySelectorAll(".nav"),v=document.querySelectorAll(".botonHover"),b=document.querySelectorAll(".cerrar"),d=document.querySelector("main"),f=document.querySelector("body"),h={botonInicio:[null,"proyectos","inicio"],botonProyectos:["inicio","tecnologias","proyectos"],botonTecnologias:["proyectos","contacto","tecnologias"],botonContacto:["tecnologias",null,"contacto"]},L={inicio:"fondoDorado",proyectos:"fondoAzul",tecnologias:"fondoRojo",contacto:"fondoNegro"},a={botonEcommerce:"infoEcommerce",botonBiblioteca:"infoBiblioteca",botonSocial:"infoSocial",botonChat:"infoChat"},y={botonEcommerce:[null,"infoBiblioteca"],botonBiblioteca:["infoEcommerce","infoSocial"],botonSocial:["infoBiblioteca","infoChat"],botonChat:["infoSocial",null]};document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".Inicio.fadeIn").forEach(t=>{t.classList.add("active")})});const m=(s,t)=>{document.querySelector(`.${t}`).classList.remove("subrayar"),document.querySelector(`.${s}`).classList.add("subrayar")},r=s=>{document.querySelectorAll(`.${s}.fadeInLargo`).forEach(e=>{e.classList.add("active")})},g=s=>{const t=f.classList.item(0);f.classList.replace(t,L[s])};I.forEach((s,t)=>{s.addEventListener("click",e=>{const o=h[s.getAttribute("class")],i=l(o[1]).offsetLeft;e.preventDefault(),m(o[1],o[2]),g(o[1]),d.scrollTo({left:i,behavior:"smooth"}),r(o[1])}),u[t].addEventListener("click",e=>{const o=h[u[t].getAttribute("class")],i=l(o[0]).offsetLeft;e.preventDefault(),m(o[0],o[2]),g(o[0]),d.scrollTo({left:i,behavior:"smooth"})})});S.forEach((s,t)=>{s.addEventListener("click",()=>{const e=document.querySelector(".subrayar").classList.item(0),o=s.classList.item(0),i=l(o).offsetLeft;d.scrollTo({left:i,behavior:"smooth"}),m(o,e),g(o),o==="proyectos"?r(o):o==="tecnologias"?(r("proyectos"),r(o)):(r("proyectos"),r("tecnologias"))}),v[t].addEventListener("click",()=>{document.querySelector("div.proyectos").classList.remove("active"),setTimeout(()=>{document.querySelector("div.proyectos").classList.add("oculto");const e=v[t].classList.item(1);document.querySelector(`.${a[e]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${a[e]}`).classList.add("active")},100)},1350)}),b[t].addEventListener("click",()=>{const e=b[t].classList.item(1);document.querySelector(`.${a[e]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[e]}`).classList.add("oculto"),document.querySelector("div.proyectos").classList.remove("oculto"),setTimeout(()=>{document.querySelector("div.proyectos").classList.add("active")},100)},1e3)})});q.forEach((s,t)=>{s.addEventListener("click",()=>{const e=s.classList.item(1),o=y[e];document.querySelector(`.${a[e]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[e]}`).classList.add("oculto"),document.querySelector(`.${o[1]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${o[1]}`).classList.add("active")},100)},1e3)}),p[t].addEventListener("click",()=>{const e=p[t].classList.item(1),o=y[e];document.querySelector(`.${a[e]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[e]}`).classList.add("oculto"),document.querySelector(`.${o[0]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${o[0]}`).classList.add("active")},100)},1e3)})});document.querySelector("form").addEventListener("submit",s=>{s.preventDefault();const t=s.target[0].value,e=s.target[1].value,o=s.target[2].value,c=s.target[3].value;Email.send({Host:"smtp.elasticemail.com",Username:"jeremiastorres030@gmail.com",Password:"14B2A37C8520A434F62A956A4033568026C4",To:"jeremiastorres030@gmail.com",From:"jeremiastorres030@gmail.com",Subject:o,Body:`Nombre: ${t} <br> Correo: ${e} <br> Mensaje: ${c}`}).then(i=>alert(i))});
+`;particlesJS.load("particles-js","/assets/particles.json");const l=e=>document.getElementById(e),p=document.querySelectorAll("#flechaIzquierda"),I=document.querySelectorAll("#flechaDerecha"),u=document.querySelectorAll("button.botonInfoIzq"),q=document.querySelectorAll("button.botonInfoDere"),L=document.querySelectorAll(".nav"),v=document.querySelectorAll(".botonHover"),b=document.querySelectorAll(".cerrar"),d=document.querySelector("main"),f=document.querySelector("body"),h={botonInicio:[null,"proyectos","inicio"],botonProyectos:["inicio","tecnologias","proyectos"],botonTecnologias:["proyectos","contacto","tecnologias"],botonContacto:["tecnologias",null,"contacto"]},S={inicio:"fondoDorado",proyectos:"fondoAzul",tecnologias:"fondoRojo",contacto:"fondoNegro"},a={botonEcommerce:"infoEcommerce",botonBiblioteca:"infoBiblioteca",botonSocial:"infoSocial",botonChat:"infoChat"},y={botonEcommerce:[null,"infoBiblioteca"],botonBiblioteca:["infoEcommerce","infoSocial"],botonSocial:["infoBiblioteca","infoChat"],botonChat:["infoSocial",null]};document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".Inicio.fadeIn").forEach(t=>{t.classList.add("active")})});const m=(e,t)=>{document.querySelector(`.${t}`).classList.remove("subrayar"),document.querySelector(`.${e}`).classList.add("subrayar")},r=e=>{document.querySelectorAll(`.${e}.fadeInLargo`).forEach(s=>{s.classList.add("active")})},g=e=>{const t=f.classList.item(0);f.classList.replace(t,S[e])};I.forEach((e,t)=>{e.addEventListener("click",s=>{const o=h[e.getAttribute("class")],c=l(o[1]).offsetLeft;s.preventDefault(),m(o[1],o[2]),g(o[1]),d.scrollTo({left:c,behavior:"smooth"}),r(o[1])}),p[t].addEventListener("click",s=>{const o=h[p[t].getAttribute("class")],c=l(o[0]).offsetLeft;s.preventDefault(),m(o[0],o[2]),g(o[0]),d.scrollTo({left:c,behavior:"smooth"})})});L.forEach((e,t)=>{e.addEventListener("click",()=>{const s=document.querySelector(".subrayar").classList.item(0),o=e.classList.item(0),c=l(o).offsetLeft;d.scrollTo({left:c,behavior:"smooth"}),m(o,s),g(o),o==="proyectos"?r(o):o==="tecnologias"?(r("proyectos"),r(o)):(r("proyectos"),r("tecnologias"))}),v[t].addEventListener("click",()=>{document.querySelector("div.proyectos").classList.remove("active"),setTimeout(()=>{document.querySelector("div.proyectos").classList.add("oculto");const s=v[t].classList.item(1);document.querySelector(`.${a[s]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${a[s]}`).classList.add("active")},100)},1350)}),b[t].addEventListener("click",()=>{const s=b[t].classList.item(1);document.querySelector(`.${a[s]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[s]}`).classList.add("oculto"),document.querySelector("div.proyectos").classList.remove("oculto"),setTimeout(()=>{document.querySelector("div.proyectos").classList.add("active")},100)},1e3)})});q.forEach((e,t)=>{e.addEventListener("click",()=>{const s=e.classList.item(1),o=y[s];document.querySelector(`.${a[s]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[s]}`).classList.add("oculto"),document.querySelector(`.${o[1]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${o[1]}`).classList.add("active")},100)},1e3)}),u[t].addEventListener("click",()=>{const s=u[t].classList.item(1),o=y[s];document.querySelector(`.${a[s]}`).classList.remove("active"),setTimeout(()=>{document.querySelector(`.${a[s]}`).classList.add("oculto"),document.querySelector(`.${o[0]}`).classList.remove("oculto"),setTimeout(()=>{document.querySelector(`.${o[0]}`).classList.add("active")},100)},1e3)})});document.querySelector("form").addEventListener("submit",e=>{e.preventDefault();const t=e.target[0].value,s=e.target[1].value,o=e.target[2].value,i=e.target[3].value,c=e.target[4];c.innerHTML="Enviando...",Email.send({Host:"smtp.elasticemail.com",Username:"jeremiastorres030@gmail.com",Password:"14B2A37C8520A434F62A956A4033568026C4",To:"jeremiastorres030@gmail.com",From:"jeremiastorres030@gmail.com",Subject:o,Body:`Nombre: ${t} <br> Correo: ${s} <br> Mensaje: ${i}`}).then(n=>{n==="OK"?(c.classList.add("exito"),c.innerHTML="Enviado"):(c.classList.add("error"),c.innerHTML="Error")})});
