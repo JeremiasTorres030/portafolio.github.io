@@ -722,7 +722,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </footer>
 `
-particlesJS.load('particles-js', './particles.json')
+particlesJS.load('particles-js', './assets/particles.json')
 const l = (e) => document.getElementById(e),
   p = document.querySelectorAll('#flechaIzquierda'),
   I = document.querySelectorAll('#flechaDerecha'),
