@@ -64,7 +64,7 @@ document.querySelector('#app').innerHTML = `
           <h1>Bienvenid@!</h1>
           <p>
             Mi nombre es <strong>Jeremías Torres</strong> , vivo en
-            <strong>Argentina, Mendoza</strong>. Tengo 19 años y actualmente
+            <strong>Argentina, Mendoza</strong>. Tengo 20 años y actualmente
             estudio <strong>desarrollo web full-stack</strong> de manera
             autodidacta.
           </p>
@@ -477,7 +477,7 @@ document.querySelector('#app').innerHTML = `
                     />
                     <a
                       target="_blank"
-                      href="https://github.com/JeremiasTorres030/Migurd-Red-social-"
+                      href="https://github.com/JeremiasTorres030/Migurd-Red-Social-V2"
                       >Fuente</a
                     >
                   </div>
