@@ -64,9 +64,7 @@ document.querySelector('#app').innerHTML = `
           <h1>Bienvenid@!</h1>
           <p>
             Mi nombre es <strong>Jeremías Torres</strong> , vivo en
-            <strong>Argentina, Mendoza</strong>. Tengo 20 años y actualmente
-            estudio <strong>desarrollo web full-stack</strong> de manera
-            autodidacta.
+            <strong>Argentina, Mendoza</strong> Y soy <strong>desarrollador web full-stack</strong>.
           </p>
 
           <div class="botones">
